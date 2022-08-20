@@ -1,0 +1,25 @@
+
+
+class Compute {
+    
+    public void Rearrange(long a[], long n)
+    {
+        ArrayList<Long> arr = new ArrayList<>();
+        for(long i=0; i<n; i++){
+            if(a[(int)i] < 0){               // push all negative numbers first
+                arr.add(a[(int)i]);
+            }
+        }
+    
+        for(long j=0; j<n; j++){
+            if(a[(int)j] >= 0){              // push all positive later
+                arr.add(a[(int)j]);
+            }
+        }
+    
+        for(long r=0; r<arr.size();r++){     // now put arraylist into array
+            a[(int)r]=arr.get((int)r);
+        }
+    }
+}
+
