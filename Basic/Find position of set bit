@@ -1,0 +1,23 @@
+
+
+class Solution {
+    static int findPosition(int N) {
+        
+        String p = Integer.toBinaryString(N);
+        int pos=-1;
+        for(int i=0;i<p.length();i++)
+        {
+            if(p.charAt(i)=='1' && pos==-1)
+            {
+                pos= p.length()-i;
+            }
+            else if(p.charAt(i)=='1' && pos!=-1)
+            {
+                return -1;
+            }
+        }
+        return pos;
+        
+    }
+};
+
