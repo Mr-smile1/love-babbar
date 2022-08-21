@@ -2,6 +2,21 @@
 
 class Solution {
     static int findPosition(int N) {
+        if(N==0){
+            return -1;
+        }
+        if((N & N-1) == 0){
+            int ans = (int)(Math.log(N) / Math.log(2));
+            return ans+1;
+        }
+        return -1;
+    }
+};
+
+///////////////////////////////////////////////////////////
+
+class Solution {
+    static int findPosition(int N) {
         
         String p = Integer.toBinaryString(N);
         int pos=-1;
