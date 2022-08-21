@@ -1,0 +1,20 @@
+
+
+class Solution{
+    public String removeConsecutiveCharacter(String s){
+        HashSet<Character> set = new HashSet<>();
+        
+        for(int i=0;i<s.length();i++){
+            set.add(s.charAt(i));
+        }
+        
+        int i=0;
+        for(Character ele: set){
+            s.charAt(i) = ele;
+            i++;
+        } 
+        
+        return s;
+    }
+}
+
